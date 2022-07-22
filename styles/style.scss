@@ -1,0 +1,92 @@
+@use "utilities/global" as *;
+
+@include setup;
+
+body {
+  font-family: $font-kumbh-sans;
+  background-color: color(dark-cyan);
+  background: {
+    image: url("../images/bg-pattern-top.svg"),
+      url("../images/bg-pattern-bottom.svg");
+    repeat: no-repeat no-repeat;
+    size: lerp($w-mobile, 622px, $w-desktop, 978px)
+        lerp($w-mobile, 621px, $w-desktop, 976px),
+      lerp($w-mobile, 622px, $w-desktop, 978px)
+        lerp($w-mobile, 621px, $w-desktop, 976px);
+    position: right lerp($w-mobile, 163px, $w-desktop, 747px) top
+        lerp($w-mobile, -355px, $w-desktop, -509px),
+      left lerp($w-mobile, 165px, $w-desktop, 692px) top
+        lerp($w-mobile, 357px, $w-desktop, 376px);
+  }
+  color: color(dark-grayish-blue);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: rem(25px);
+  text-align: center;
+}
+
+strong {
+  @include setFont(rem(18px), 22, 700);
+  color: color(very-dark-desaturated-blue);
+}
+
+.card {
+  background-color: white;
+  background-image: url("../images/bg-pattern-card.svg");
+  background-repeat: no-repeat;
+  box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.504835);
+  border-radius: 15px;
+  width: 100%;
+  max-width: rem(350px);
+  padding-top: rem(92px);
+  z-index: 2;
+}
+
+.card__profile-pic {
+  display: block;
+  margin: 0 auto;
+  border: 5px solid white;
+  border-radius: 50%;
+  margin-bottom: rem(24px);
+}
+
+.card__name-age {
+  @include setFont(rem(18px), 22px, 400);
+  display: flex;
+  gap: em(9px, 18px);
+  justify-content: center;
+  margin-bottom: em(8px, 18px);
+}
+
+.card__city {
+  @include setFont(rem(17px), 14px, 400);
+  margin-bottom: em(24px, 17px);
+}
+
+.card__stats {
+  display: flex;
+  justify-content: space-between;
+  max-width: rem(331px);
+  border-top: 1px solid hsla(228, 9%, 92%, 1);
+  padding-block: rem(24px);
+  padding-inline: rem(41px);
+  margin-inline: auto;
+}
+
+.stat__caption {
+  @include setFont(rem(10px), 12, 400);
+  letter-spacing: 1.5px;
+  margin-top: em(5px, 10px);
+}
+
+.attribution {
+  position: fixed;
+  bottom: 1em;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

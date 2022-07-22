@@ -43,9 +43,13 @@
 
 @function lerp_clamp($x1, $y1, $x2, $y2) {
   //sets a lower and upper bound to the function
-  @if $y1 < $y2 {
-    @return clamp($y1, lerp($x1, $y1, $x2, $y2), $y2);
-  } @else {
-    @return clamp($y2, lerp($x1, $y1, $x2, $y2), $y1);
-  }
+  @return clamp(
+    math.min($y1, $y2),
+    lerp($x1, $y1, $x2, $y2),
+    math.max($y1, $y2)
+  );
+}
+
+@function fluid($y1, $y2) {
+  @return lerp_clamp($w-mobile, $y1, $w-desktop, $y2);
 }

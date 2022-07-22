@@ -1,0 +1,102 @@
+:root {
+  font-size: 1.125em;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: hsl(185deg, 75%, 39%);
+  background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat no-repeat;
+  background-size: calc(0.3342723005 * 100vw + 496.6478873239px) calc(0.3333333333 * 100vw + 496px), calc(0.3342723005 * 100vw + 496.6478873239px) calc(0.3333333333 * 100vw + 496px);
+  background-position: right calc(0.5483568075 * 100vw + -42.6338028169px) top calc(-0.144600939 * 100vw + -300.7746478873px), left calc(0.4948356808 * 100vw + -20.5633802817px) top calc(0.0178403756 * 100vw + 350.3098591549px);
+  color: hsl(227deg, 10%, 46%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 1.3888888889rem;
+  text-align: center;
+}
+
+strong {
+  font-size: 1rem;
+  line-height: 1.2222222222;
+  font-weight: 700;
+  color: hsl(229deg, 23%, 23%);
+}
+
+.card {
+  background-color: white;
+  background-image: url("../images/bg-pattern-card.svg");
+  background-repeat: no-repeat;
+  box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.504835);
+  border-radius: 15px;
+  width: 100%;
+  max-width: 19.4444444444rem;
+  padding-top: 5.1111111111rem;
+  z-index: 2;
+}
+
+.card__profile-pic {
+  display: block;
+  margin: 0 auto;
+  border: 5px solid white;
+  border-radius: 50%;
+  margin-bottom: 1.3333333333rem;
+}
+
+.card__name-age {
+  font-size: 1rem;
+  line-height: 1.2222222222;
+  font-weight: 400;
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+  margin-bottom: 0.4444444444em;
+}
+
+.card__city {
+  font-size: 0.9444444444rem;
+  line-height: 0.8235294118;
+  font-weight: 400;
+  margin-bottom: 1.4117647059em;
+}
+
+.card__stats {
+  display: flex;
+  justify-content: space-between;
+  max-width: 18.3888888889rem;
+  border-top: 1px solid hsl(228deg, 9%, 92%);
+  padding-block: 1.3333333333rem;
+  padding-inline: 2.2777777778rem;
+  margin-inline: auto;
+}
+
+.stat__caption {
+  font-size: 0.5555555556rem;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  margin-top: 0.5em;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 1em;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+/*# sourceMappingURL=style.css.map */
